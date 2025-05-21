@@ -76,7 +76,7 @@
         resultado = `Resultado: ${face}`;
         emoji = face.toString(); 
       }
-      else if (tipo === "d6normal") {
+      else if (tipo === "d6simples") {
         face = Math.floor(Math.random() * 6) + 1;
         resultado = `Resultado: ${face}`;
         emoji = face.toString();
