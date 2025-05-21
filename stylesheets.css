@@ -23,6 +23,10 @@ label {
   font-weight: 600;
   color: #444;
   font-size: 1.125rem; /* 18px */
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Select, input e botão - layout fluido */
@@ -53,6 +57,8 @@ button {
   min-height: 48px; /* aumenta área clicável */
   font-weight: 600;
   user-select: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
 }
 
 button:hover, button:focus {
@@ -73,6 +79,8 @@ button:hover, button:focus {
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  word-wrap: break-word;
+  text-align: center;
 }
 
 /* Emojis animados */
@@ -127,7 +135,9 @@ button:hover, button:focus {
   100% { transform: rotate(720deg) scale(1); }
 }
 
-/* Responsividade */
+/* RESPONSIVIDADE */
+
+/* Até tablets - 900px */
 @media (max-width: 900px) {
   body {
     padding: 40px 4vw;
@@ -135,27 +145,51 @@ button:hover, button:focus {
   #resultado, #historico, #valoresGuardados {
     max-width: 90vw;
   }
-  select, input[type="number"], button {
+  label, select, input[type="number"], button {
     max-width: 100%;
+    font-size: 1.125rem;
   }
 }
 
+/* Para celular - 600px e menor */
 @media (max-width: 600px) {
   body {
     padding: 30px 3vw;
   }
+
+  label {
+    font-size: 1rem;
+    margin: 12px 0 4px;
+  }
+
   select, input[type="number"], button {
-    font-size: 1rem; /* 16px */
-    padding: 16px 18px;
-    min-height: 52px; /* botões maiores para toque */
+    font-size: 1.125rem; /* 18px */
+    padding: 18px 20px;
+    min-height: 56px; /* botões e inputs maiores para toque */
     border-radius: 12px;
+    max-width: 100%;
+    width: 100%;
+    margin: 8px auto;
+    display: block;
   }
+
+  input[type=number] {
+    max-width: 100%;
+  }
+
   button {
-    min-height: 56px;
+    min-height: 60px;
   }
+
   #resultado, #historico, #valoresGuardados {
     font-size: 1rem;
     padding: 15px;
     width: 100%;
+    box-sizing: border-box;
+  }
+
+  #emojis {
+    font-size: 2.5rem;
+    margin: 15px 0;
   }
 }
