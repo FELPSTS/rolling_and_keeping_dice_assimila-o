@@ -53,6 +53,12 @@
     let resultadosTexto = [];
     let resultadosEmojis = [];
 
+    if (tipo === "coroa") {
+      const face = Math.random() < 0.5 ? "Cara" : "Coroa";
+      resultadosTexto.push(`Resultado: ${face}`);
+      resultadosEmojis.push(`<span class="dado animar">${face}</span>`);
+    }
+
     emojisDiv.innerHTML = "";
 
     for (let i = 0; i < quantidade; i++) {
@@ -76,7 +82,7 @@
         resultado = `Resultado: ${face}`;
         emoji = face.toString(); 
       }
-      else if (tipo === "d6normal") {
+      else if (tipo === "d6simples") {
         face = Math.floor(Math.random() * 6) + 1;
         resultado = `Resultado: ${face}`;
         emoji = face.toString();

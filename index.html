@@ -7,14 +7,23 @@
 <body>
   <label for="tipoDado">Escolha o dado:</label>
   <select id="tipoDado">
-    <option value="d6">D6 (instintos assimilação)</option>
-    <option value="d10">D10 (conhecimentos assimilação)</option>
-    <option value="d12">D12 (práticas assimilação)</option>
+    <optgroup label="Assimilação">
+      <option value="d6">D6 — Instintos</option>
+      <option value="d10">D10 — Conhecimentos</option>
+      <option value="d12">D12 — Práticas</option>
+    </optgroup>
 
-    <option value="d6simples">D6 (normal)</option>
-    <option value="d4">D4 (normal)</option>
-    <option value="d20">D20 (normal)</option>
+    <optgroup label="Normais">
+      <option value="d4">D4</option>
+      <option value="d6simples">D6</option>
+      <option value="d20">D20</option>
+    </optgroup>
+
+    <optgroup label="Outros">
+      <option value="coroa">Cara ou Coroa</option>
+    </optgroup>
   </select>
+
 
 
   <label for="quantidade">Quantidade:</label>
