@@ -1,65 +1,102 @@
-    body {
-      font-family: Arial, sans-serif;
-      background: #fdf4e3;
-      text-align: center;
-      padding-top: 50px;
-    }
-    h1 {
-      color: #333;
-    }
-    select, input, button {
-      padding: 10px 20px;
-      font-size: 18px;
-      margin: 10px;
-    }
-    input[type=number] {
-      width: 80px;
-    }
-    button {
-      background-color: #008040;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #006633;
-    }
-    #resultado {
-      font-size: 24px;
-      margin-top: 30px;
-    }
-    .dado {
-      font-size: 50px;
-      margin: 10px;
-      display: inline-block;
-      transition: transform 0.6s ease-in-out;
-    }
-    .animar {
-      animation: girarDado 0.6s ease-in-out;
-    }
-    @keyframes girarDado {
-      0%   { transform: rotate(0deg) scale(1); }
-      50%  { transform: rotate(360deg) scale(1.4); }
-      100% { transform: rotate(720deg) scale(1); }
-    }
-    #historico {
-      margin-top: 40px;
-      padding: 20px;
-      background: #fff;
-      border-radius: 10px;
-      text-align: left;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    #historico h2 {
-      margin-bottom: 10px;
-      font-size: 20px;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 5px;
-    }
-    .entrada-historico {
-      margin-bottom: 8px;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background: #fdf4e3;
+  text-align: center;
+  padding: 5vh 5vw;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #333;
+  font-size: 6vw;
+  max-width: 90%;
+  margin: auto;
+}
+
+select,
+input,
+button {
+  padding: 1em;
+  font-size: 1.2em;
+  margin: 10px;
+  width: 90%;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+input[type=number] {
+  width: 80px;
+}
+
+button {
+  background-color: #008040;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #006633;
+}
+
+#resultado {
+  font-size: 5vw;
+  margin-top: 30px;
+}
+
+.dado {
+  font-size: 10vw;
+  margin: 10px;
+  display: inline-block;
+  transition: transform 0.6s ease-in-out;
+}
+
+.animar {
+  animation: girarDado 0.6s ease-in-out;
+}
+
+@keyframes girarDado {
+  0%   { transform: rotate(0deg) scale(1); }
+  50%  { transform: rotate(360deg) scale(1.4); }
+  100% { transform: rotate(720deg) scale(1); }
+}
+
+#historico {
+  margin-top: 40px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  text-align: left;
+  width: 90%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#historico h2 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.entrada-historico {
+  margin-bottom: 8px;
+}
+
+/* Media query para telas menores */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 7vw;
+  }
+
+  .dado {
+    font-size: 12vw;
+  }
+
+  #resultado {
+    font-size: 6vw;
+  }
+}
