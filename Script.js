@@ -70,11 +70,22 @@
         face = Math.floor(Math.random() * 12) + 1;
         ({ texto: resultado, emoji } = getResultadoD12(face));
       }
-          else if (tipo === "d20") {
-      face = Math.floor(Math.random() * 20) + 1;
-      resultado = `Resultado: ${face}`;
-      emoji = face.toString(); // Apenas mostra o número
-    }
+
+      else if (tipo === "d4") {
+        face = Math.floor(Math.random() * 4) + 1;
+        resultado = `Resultado: ${face}`;
+        emoji = face.toString(); 
+      }
+      else if (tipo === "d6normal") {
+        face = Math.floor(Math.random() * 6) + 1;
+        resultado = `Resultado: ${face}`;
+        emoji = face.toString();
+      }
+      else if (tipo === "d20") {
+        face = Math.floor(Math.random() * 20) + 1;
+        resultado = `Resultado: ${face}`;
+        emoji = face.toString(); 
+      }
 
 
       resultadosTexto.push(resultado);
