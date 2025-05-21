@@ -50,14 +50,14 @@
     const emojisDiv = document.getElementById("emojis");
     const listaHistorico = document.getElementById("listaHistorico");
 
+    let resultadosTexto = [];
+    let resultadosEmojis = [];
+
    if (tipo === "coroa") {
       const face = Math.random() < 0.5 ? "Cara" : "Coroa";
       resultadosTexto.push(`Resultado: ${face}`);
       resultadosEmojis.push(`<span class="dado animar">${face}</span>`);
     }
-
-    let resultadosTexto = [];
-    let resultadosEmojis = [];
 
     emojisDiv.innerHTML = "";
 
