@@ -87,6 +87,11 @@
         resultado = `Resultado: ${face}`;
         emoji = face.toString();
       }
+      else if (tipo === "d8") {
+        face = Math.floor(Math.random() * 8) + 1;
+        resultado = `Resultado: ${face}`;
+        emoji = face.toString();
+      }
       else if (tipo === "d20") {
         face = Math.floor(Math.random() * 20) + 1;
         resultado = `Resultado: ${face}`;
